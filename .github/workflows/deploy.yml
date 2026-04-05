@@ -42,6 +42,7 @@ jobs:
 
       - name: Build, tag, and push Docker image
         env:
+          # dev and uat
           REGISTRY: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com
           REPOSITORY: ${{ env.ECR_REPO }}
         run: |
